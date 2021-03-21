@@ -34,12 +34,19 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'social_django',
     'core',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook'
 
 ]
 
@@ -115,6 +122,7 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.instagram.InstagramOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 
@@ -145,7 +153,12 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 
 LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'home'
+# LOGIN_REDIRECT_URL = 'home'
 LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
 
+
+SOCIAL_AUTH_FACEBOOK_KEY = '908495439989950'        # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '8038dbd5b0dc87b07c8fadc74a22f325'  # App Secret
+
+SITE_ID=1
