@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+
+<div class="list" style="margin-top: 50px;">
+    <table class="table  table-light table-hover">
+        <h3 class="d-flex justify-content-center">Listing</h3>
+        <tr>
+            <th></th>
+            <th>Source</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Rating</th>
+            <th>Listed</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        {% for i in data %}
+
+        <tr>
+            <td><i style="font-size:24px" class="fa">&#xf09a;</i>
+            <td>{{ i.source }}</td>
+            <td>{{ i.page_name }}</td>
+            <td>{{ i.address}}</td>
+            <td>{{ i.phone }}</td>
+            <td></td>
+            <td>{% if i.listed == 0 %}No
+                {% else %}
+                 yes
+                {% endif %}
+            <td>{% if i.listed == 0 %}&#10060;
+                {% else %}
+                &#9989;
+                {% endif %}
+            </td>
+            </td>
+            {% if i.listed == 0 %}
+            <td><a href="{% url 'updatepage' i.id %}" class="btn btn-primary ">Update</a></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</div>
+
+{% endblock%}

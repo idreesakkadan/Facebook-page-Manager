@@ -1,5 +1,4 @@
 {% load static %}
-{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,17 +16,10 @@
             <div class="card p-5">
                 <div class="row">
                     <div class="col-md-8 mx-auto social-container my-2 order-md-1">
-                        <!-- <button class="btn btn-danger  mb-2">
-                            <a href="#" class="text-white">Login with Instagram</a>
-                        </button> -->
                         <button class="btn btn-primary mb-2">
                             <a href="{% url 'social:begin' 'facebook' %}" class="text-white" >Login with Facebook</a>
-                            <!-- <a href="{% provider_login_url 'facebook' method='js_sdk' %}" class="text-white" >Login with Facebook</a> -->
 
                         </button>
-                        <!-- <button class="btn btn-info mb-2 ">
-                            <a href="#" class="text-white" >Login with LinkedIn</a>
-                        </button> -->
                     </div>
                 </div>
                 </div>

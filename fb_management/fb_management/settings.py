@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -43,10 +44,6 @@ INSTALLED_APPS = [
     'social_django',
     'core',
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook'
 
 ]
 
@@ -122,7 +119,6 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.instagram.InstagramOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 
@@ -152,13 +148,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 
-LOGIN_URL = 'login'
-# LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = ''
+LOGIN_REDIRECT_URL = 'listpage'
 LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
 
 
-SOCIAL_AUTH_FACEBOOK_KEY = '908495439989950'        # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = '8038dbd5b0dc87b07c8fadc74a22f325'  # App Secret
+SOCIAL_AUTH_FACEBOOK_KEY = '2842684886043677'        # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '8c70cc400a7ee35f861740382edb6f8c'  # App Secret
 
-SITE_ID=1
