@@ -41,7 +41,7 @@ def appoinments(request,):
 
 @login_required
 def get_data(request):
-  token = {"EAAoZAaCbXTB0BADr65cuxuLZCq3tXR6skFwphq5ZAZA0dZBd6ZC1XtsSfuAj1Iy2xrDoCubZCo4LmdkDbtHZBAMjC4fjbr9C891ZAXLIHaSa1Y3jjqLJ1GDvRSK2GqGcTolwEfE37cgN916j5BwS0WNi1sjLKLjpEdjAe28xshVZBdt879ScBFUdzX2ZCbJm8qtaJgNyLALsN9NTqezpeXzZBwSq"}
+  token = {"EAAoZAaCbXTB0BALgUswfgdYXJGEo6eN0W3dI4MQlGYvZACZBio2O9QZBLzKSZBCJKZBQQKREcSPtxnDVFh0JJigESnhkDM1DsJnL5NuL79lfZCtrvUS6nnJwCaWiazp1LwrKm4MjdxdZC7A7yOZCARliIZAe02eh9AcNuaQbm4D0FxjbWRd6aVyTqX2ZAtbHBVwzbZCBBtBYVzO2oj9zWL4SCAQx"}
   
   graph = facebook.GraphAPI(access_token=token)
 
@@ -59,7 +59,7 @@ def get_data(request):
   obj1 = Pages.objects.create(source=source,page_name=name,address=location,phone=phone,listed=0)
 
 
-  token2 = {'EAAoZAaCbXTB0BAJ3ZCZCKVArXDUv6PESbZCP2qpGITZCdf7Gd01rIUddD5M7nB2mp35X3ZC0KmMOZCVv7jgY9LsAZCy70XtQekHAsx2trtdssc6AAvZAPCxMHZAqjk3NLYKfbWHvrekeRxU8iusjXsxfEuo9FN5jiAXdskMnj0tHe5XwRCUWTdZAZA3U848GW2IZAsMdZC00JLM9W9v8lqLetKZABjF'}
+  token2 = {'EAAoZAaCbXTB0BAKBY43X1TjJyw2EW7G4teWVRqAXFZCMZCe1NaBZAd1X7YrC15HSq2mtvRINJ0lOLNE4mjZAcxy8vxJT01PbfCpUSLn5mt9GwrOhmtZAymYq8zGj2ZA2qauRi7sT926a5EPxhi3h2noK1TfKDH0wSEsdwqh3jW5Cti6aKswpW3jNlNS7ZCae7KXF1ZAy3iPltIxBaxqY6BrgD'}
   graph = facebook.GraphAPI(access_token=token2)
 
   fields = ['name','location','phone']
@@ -77,7 +77,7 @@ def get_data(request):
 
 
 
-  token3 = {'EAAoZAaCbXTB0BAIwjnZAyPH2XhyBME6IlrpIMyqpjKXvKMYU10pnboqpvlqqzWNiZCIFhAKoZBHZAemz6XfNvVi8ZBuGiDBkVFHhx8LjUH04KxfDpx6P55ZCjZAZAkyTMkAqkTKDlgpHvZAhR17kZAmZBS7O43kSPqqHA6uWybDfUy9eTPu70qDR40d4Tq4iySYrEpnddMZAZBeDmFA42bYj9QLKzp'}
+  token3 = {'EAAoZAaCbXTB0BAOSARiWnycuXpz4xEwaOMtmenvpP7cdYZB5SEnARL451dGZCmKlTvvbSim2mH45iNtyRl7U23mVgqRHZAgNrTpz7NyLOJOdZA8lLEXIDT8ZBi0Xn3vOQ3MeKIGHi64EocUDNd378R2UKgo0TcANVqkjtvnxSAtgrpTxEoFRt4qR6GQW7MjbBo3cOs7HwP3cXknjKBMXEO'}
   graph = facebook.GraphAPI(access_token=token3)
 
   fields = ['name','location','phone']
